@@ -7,7 +7,7 @@ RUN curl -L -o /usr/bin/kubectl "https://storage.googleapis.com/kubernetes-relea
     chmod +x /usr/bin/kubectl ;\
     kubectl version --client
 
-ENV HELM_VERSION 3.0.0-beta.3
+ENV HELM_VERSION 3.0.0-beta.5
 RUN curl "https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz" | tar zx ;\
     mv linux-amd64/helm /usr/bin/ ;\
     helm version
