@@ -15,3 +15,8 @@ RUN curl "https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz" | tar zx
 ENV HELM_2TO3_VERSION 0.1.10
 RUN helm plugin install https://github.com/helm/helm-2to3 --version ${HELM_2TO3_VERSION} ;\
     helm plugin list
+
+ENV HELM2_VERSION 2.14.3
+RUN curl "https://get.helm.sh/helm-v${HELM2_VERSION}-linux-amd64.tar.gz" | tar zx ;\
+    mv linux-amd64/helm /usr/bin/helm2 ;\
+    helm2 version --client
