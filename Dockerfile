@@ -7,7 +7,7 @@ RUN curl --silent -L -o /usr/bin/kubectl "https://storage.googleapis.com/kuberne
     chmod +x /usr/bin/kubectl ;\
     kubectl version --client
 
-ENV HELM_VERSION 3.2.0
+ENV HELM_VERSION 3.5.2
 RUN curl --silent "https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz" | tar zx ;\
     mv linux-amd64/helm /usr/bin/ ;\
     helm version
